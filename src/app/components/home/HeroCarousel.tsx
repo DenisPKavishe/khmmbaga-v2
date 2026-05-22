@@ -11,7 +11,7 @@ const slides = [
     tagline: 'Construction and Supplier',
     title: 'Quality\nConstruction.',
     description: 'Decades of craftsmanship, innovation, and trust transforming bold visions into enduring structures that stand the test of time.',
-    primaryBtn: { text: 'Our Services', link: '/ourservice' },
+    primaryBtn: { text: 'Our Services', link: '/services' },
     secondaryBtn: { text: 'Book', link: '/contact' },
   },
   {
@@ -20,7 +20,7 @@ const slides = [
     tagline: 'Industrial Excellence',
     title: 'Built to\nLast.',
     description: 'From foundation to finish, our industrial division delivers precision engineering and quality materials on every project we undertake.',
-    primaryBtn: { text: 'View Projects', link: '/projects' },
+    primaryBtn: { text: 'View Projects', link: '/gallery' },
     secondaryBtn: { text: 'Learn About Us', link: '/about' },
   },
   {
