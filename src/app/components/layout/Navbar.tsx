@@ -132,107 +132,121 @@ export default function Navbar() {
         </button>
       </nav>
 
-      {/* Mobile Drawer Menu */}
+      {/* Mobile Drawer Menu - Made Scrollable */}
       <div 
-        className={`fixed top-0 right-0 h-full w-80 bg-gradient-to-br from-gray-900 to-gray-800 z-[100] p-8 flex flex-col gap-6 transition-all duration-500 transform shadow-2xl ${
+        className={`fixed top-0 right-0 h-full w-full sm:w-96 bg-gradient-to-br from-gray-900 to-gray-800 z-[100] transition-all duration-500 transform shadow-2xl flex flex-col ${
           mobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
-        {/* Close button */}
-        <button 
-          onClick={() => setMobileMenuOpen(false)}
-          className="self-end text-white text-3xl w-10 h-10 rounded-full flex items-center justify-center hover:bg-white/10 transition-all duration-300 hover:rotate-90"
-          aria-label="Close menu"
-        >
-          <i className="fas fa-times"></i>
-        </button>
-        
-        {/* Mobile Logo */}
-        <div className="flex flex-col items-center justify-center gap-2 mb-4">
-          <div className="relative w-20 h-20 rounded-xl overflow-hidden bg-white/10 p-2 flex items-center justify-center">
-            <Image 
-              src="/images/logo.png" 
-              alt="KH MMBAGA Logo" 
-              width={80} 
-              height={80}
-              className="object-contain w-full h-full"
-              priority
-            />
-          </div>
-          <div className="text-center">
-            <span className="font-bold text-2xl text-white block">KH MMBAGA</span>
-            <span className="text-[10px] tracking-[0.15em] text-gray-400 block mt-1">
-              CONSTRUCTION &amp; SUPPLIER
-            </span>
-          </div>
-        </div>
-        
-        {/* Mobile Navigation Links */}
-        <div className="flex flex-col gap-2 mt-2">
-          {navLinks.map((link, index) => {
-            const iconMap: Record<string, string> = {
-              '/': 'fas fa-home',
-              '/about': 'fas fa-info-circle',
-              '/services': 'fas fa-cogs',
-              '/gallery': 'fas fa-images',
-              '/hardware': 'fas fa-tools',
-            };
-            return (
-              <Link
-                key={link.href}
-                href={link.href}
-                onClick={() => setMobileMenuOpen(false)}
-                className={`group flex items-center gap-3 px-4 py-3 rounded-xl transition-all duration-300 ${
-                  pathname === link.href
-                    ? 'bg-primary/20 text-primary'
-                    : 'text-gray-300 hover:bg-white/10 hover:text-white hover:translate-x-2'
-                }`}
-                style={{
-                  animation: `slideInLeft 0.5s ease-out ${index * 0.1}s forwards`,
-                  opacity: 0,
-                  transform: 'translateX(-20px)'
-                }}
-              >
-                <i className={`${iconMap[link.href]} w-5 transition-all duration-300 group-hover:scale-110`}></i>
-                <span className="font-medium text-base">{link.label}</span>
-                {pathname === link.href && (
-                  <i className="fas fa-check-circle text-primary ml-auto text-sm"></i>
-                )}
-              </Link>
-            );
-          })}
-        </div>
-        
-        {/* Mobile Contact Button */}
-        <Link
-          href="/contact"
-          onClick={() => setMobileMenuOpen(false)}
-          className="group relative mt-4 overflow-hidden rounded-xl shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-105 active:scale-95"
-          style={{
-            animation: 'fadeInScale 0.5s ease-out 0.4s forwards',
-            opacity: 0,
-            transform: 'scale(0.9)'
-          }}
-        >
-          <span className="absolute inset-0 bg-gradient-to-r from-primary to-secondary"></span>
-          <span className="absolute -inset-full -top-1/2 -translate-x-full group-hover:translate-x-full transition-transform duration-700 bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-12"></span>
-          <button className="relative w-full px-6 py-4 rounded-xl text-white font-semibold text-base flex items-center justify-center gap-3 z-10">
-            <i className="fas fa-envelope group-hover:scale-110 transition-transform duration-300"></i>
-            <span>Contact Us</span>
-            <i className="fas fa-arrow-right opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300"></i>
+        {/* Header Section - Fixed at top */}
+        <div className="flex-shrink-0 p-6 pb-4">
+          {/* Close button */}
+          <button 
+            onClick={() => setMobileMenuOpen(false)}
+            className="absolute top-4 right-4 text-white text-3xl w-10 h-10 rounded-full flex items-center justify-center hover:bg-white/10 transition-all duration-300 hover:rotate-90"
+            aria-label="Close menu"
+          >
+            <i className="fas fa-times"></i>
           </button>
-        </Link>
+          
+          {/* Mobile Logo */}
+          <div className="flex flex-col items-center justify-center gap-2 mt-4">
+            <div className="relative w-20 h-20 rounded-xl overflow-hidden bg-white/10 p-2 flex items-center justify-center">
+              <Image 
+                src="/images/logo.png" 
+                alt="KH MMBAGA Logo" 
+                width={80} 
+                height={80}
+                className="object-contain w-full h-full"
+                priority
+              />
+            </div>
+            <div className="text-center">
+              <span className="font-bold text-2xl text-white block">KH MMBAGA</span>
+              <span className="text-[10px] tracking-[0.15em] text-gray-400 block mt-1">
+                CONSTRUCTION &amp; SUPPLIER
+              </span>
+            </div>
+          </div>
+        </div>
 
-        {/* Mobile Contact Info */}
-        <div className="mt-auto pt-6 border-t border-white/10 text-center">
-          <p className="text-gray-400 text-xs flex items-center justify-center gap-2">
-            <i className="fas fa-phone-alt text-primary text-xs"></i>
-            <span>+255 766 689 136</span>
-          </p>
-          <p className="text-gray-400 text-xs flex items-center justify-center gap-2 mt-2">
-            <i className="fas fa-envelope text-primary text-xs"></i>
-            <span>info@khmmbaga.co.tz</span>
-          </p>
+        {/* Scrollable Content Section */}
+        <div className="flex-1 overflow-y-auto px-6 pb-6">
+          {/* Mobile Navigation Links */}
+          <div className="flex flex-col gap-2 mt-2">
+            {navLinks.map((link, index) => {
+              const iconMap: Record<string, string> = {
+                '/': 'fas fa-home',
+                '/about': 'fas fa-info-circle',
+                '/services': 'fas fa-cogs',
+                '/gallery': 'fas fa-images',
+                '/hardware': 'fas fa-tools',
+              };
+              return (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  onClick={() => setMobileMenuOpen(false)}
+                  className={`group flex items-center gap-3 px-4 py-3 rounded-xl transition-all duration-300 ${
+                    pathname === link.href
+                      ? 'bg-primary/20 text-primary'
+                      : 'text-gray-300 hover:bg-white/10 hover:text-white hover:translate-x-2'
+                  }`}
+                  style={{
+                    animation: `slideInLeft 0.5s ease-out ${index * 0.1}s forwards`,
+                    opacity: 0,
+                    transform: 'translateX(-20px)'
+                  }}
+                >
+                  <i className={`${iconMap[link.href]} w-5 transition-all duration-300 group-hover:scale-110`}></i>
+                  <span className="font-medium text-base">{link.label}</span>
+                  {pathname === link.href && (
+                    <i className="fas fa-check-circle text-primary ml-auto text-sm"></i>
+                  )}
+                </Link>
+              );
+            })}
+          </div>
+          
+          {/* Mobile Contact Button */}
+          <Link
+            href="/contact"
+            onClick={() => setMobileMenuOpen(false)}
+            className="group relative mt-6 overflow-hidden rounded-xl shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-105 active:scale-95 block"
+            style={{
+              animation: 'fadeInScale 0.5s ease-out 0.4s forwards',
+              opacity: 0,
+              transform: 'scale(0.9)'
+            }}
+          >
+            <span className="absolute inset-0 bg-gradient-to-r from-primary to-secondary"></span>
+            <span className="absolute -inset-full -top-1/2 -translate-x-full group-hover:translate-x-full transition-transform duration-700 bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-12"></span>
+            <button className="relative w-full px-6 py-4 rounded-xl text-white font-semibold text-base flex items-center justify-center gap-3 z-10">
+              <i className="fas fa-envelope group-hover:scale-110 transition-transform duration-300"></i>
+              <span>Contact Us</span>
+              <i className="fas fa-arrow-right opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300"></i>
+            </button>
+          </Link>
+
+
+          {/* Contact Info Section */}
+          <div className="mt-6 pt-4 border-t border-white/10">
+            <h3 className="text-white/60 text-xs font-semibold uppercase tracking-wider mb-3">Contact Info</h3>
+            <div className="space-y-3">
+              <p className="text-gray-400 text-xs flex items-center gap-2">
+                <i className="fas fa-phone-alt text-primary text-xs w-4"></i>
+                <span>+255 766 689 136</span>
+              </p>
+              <p className="text-gray-400 text-xs flex items-center gap-2">
+                <i className="fas fa-envelope text-primary text-xs w-4"></i>
+                <span>khmmbagacompanyltd@gmail.com</span>
+              </p>
+              <p className="text-gray-400 text-xs flex items-center gap-2">
+                <i className="fas fa-map-marker-alt text-primary text-xs w-4"></i>
+                <span>Arusha, Tanzania</span>
+              </p>
+            </div>
+          </div>
         </div>
       </div>
 

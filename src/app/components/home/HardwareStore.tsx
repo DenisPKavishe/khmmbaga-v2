@@ -3,45 +3,64 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { useInView } from 'react-intersection-observer';
+import { useState } from 'react';
 
 const tools = [
   {
-    image: 'https://images.unsplash.com/photo-1504148455328-c376907d081c?w=200&q=80',
-    name: 'Heavy Duty Drill',
-    description: 'Professional cordless drill with hammer function',
+    image: 'https://images.unsplash.com/photo-1586864387967-d02ef85d93e8?q=80&w=1470&auto=format&fit=crop',
+    name: 'Professional Hammer',
+    description: 'Heavy-duty hammer with fiberglass handle, ideal for construction and demolition work.',
     price: 'TZS 85,000',
+    category: 'Hand Tools',
+    rating: 4.5,
     delay: 100,
   },
   {
-    image: 'https://images.unsplash.com/photo-1572981779307-38b8cabb2407?w=200&q=80',
-    name: 'Angle Grinder',
-    description: '900W angle grinder for metal and stone cutting',
+    image: '/images/mabati.jpeg',
+    name: 'Premium Roof Sheets',
+    description: 'High-quality galvanized iron sheets, corrosion-resistant, available in various colors and sizes.',
     price: 'TZS 65,000',
+    category: 'Roofing Materials',
+    rating: 4.8,
     delay: 200,
   },
   {
-    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=200&q=80',
+    image: 'https://plus.unsplash.com/premium_photo-1681989493328-0e5301879a4f?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c2FmZXR5JTIwaGVsbWVudHxlbnwwfHwwfHx8MA%3D%3D',
     name: 'Safety Helmet',
-    description: 'EN397 certified hard hat for full site protection',
+    description: 'EN397 certified hard hat with adjustable fit, superior impact protection for full site safety.',
     price: 'TZS 18,000',
+    category: 'Safety Gear',
+    rating: 4.7,
     delay: 300,
   },
   {
-    image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=200&q=80',
-    name: 'Laser Level Kit',
-    description: '360° self-leveling laser for perfect alignment',
+    image: 'https://images.unsplash.com/photo-1632129402289-8a3190ed7a9e?w=800&auto=format&fit=crop&q=60',
+    name: 'Steel Reinforcement Bars',
+    description: 'High-tensile steel bars for concrete reinforcement, meeting international standards.',
     price: 'TZS 120,000',
+    category: 'Steel Materials',
+    rating: 4.9,
     delay: 400,
   },
 ];
 
 export default function HardwareStore() {
   const [ref, inView] = useInView({ threshold: 0.1, triggerOnce: true });
+  const [hoveredCard, setHoveredCard] = useState<number | null>(null);
+
+  const renderStars = (rating: number) => {
+    const fullStars = Math.floor(rating);
+    const stars = [];
+    for (let i = 0; i < fullStars; i++) {
+      stars.push(<i key={i} className="fas fa-star text-yellow-400 text-xs"></i>);
+    }
+    return stars;
+  };
 
   return (
     <section
       id="store"
-      className="section-bg py-28"
+      className="section-bg py-28 bg-gradient-to-b from-gray-50 to-white"
       style={
         {
           '--bg-img':
@@ -50,6 +69,7 @@ export default function HardwareStore() {
       }
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
+        {/* Header Section */}
         <div className="text-center mb-16">
           <p
             className={`text-primary uppercase tracking-[4px] text-xs font-bold mb-3 transition-all duration-700 ${
@@ -76,28 +96,88 @@ export default function HardwareStore() {
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {/* Product Cards Grid */}
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {tools.map((tool, index) => (
             <div
               key={index}
-              className={`tool-card bg-gray-50 rounded-2xl p-6 border border-gray-100 text-center transition-all duration-700 ${
+              className={`group relative bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 ${
                 inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
               }`}
               style={{ transitionDelay: `${tool.delay}ms` }}
+              onMouseEnter={() => setHoveredCard(index)}
+              onMouseLeave={() => setHoveredCard(null)}
             >
-              <div className="relative w-20 h-20 mx-auto mb-4 rounded-2xl overflow-hidden bg-white shadow-sm">
-                <Image src={tool.image} alt={tool.name} fill className="object-cover" />
+              {/* Badge */}
+              <div className="absolute top-4 left-4 z-10">
+                <span className="bg-orange-500 text-white text-xs px-3 py-1 rounded-full font-semibold">
+                  {tool.category}
+                </span>
               </div>
-              <h4 className="font-heading text-dark text-base font-bold mb-1">{tool.name}</h4>
-              <p className="text-gray-500 text-xs mb-3">{tool.description}</p>
-              <span className="text-primary font-bold text-sm">{tool.price}</span>
+              
+              {/* Wishlist Button */}
+              <button className="absolute top-4 right-4 z-10 w-8 h-8 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center text-gray-600 hover:text-red-500 transition-all duration-300">
+                <i className="far fa-heart"></i>
+              </button>
+
+              {/* Product Image */}
+              <div className="relative h-56 overflow-hidden bg-gray-100">
+                <Image
+                  src={tool.image}
+                  alt={tool.name}
+                  fill
+                  className={`object-cover transition-transform duration-700 ${
+                    hoveredCard === index ? 'scale-110' : 'scale-100'
+                  }`}
+                />
+              </div>
+
+              {/* Product Info */}
+              <div className="p-5">
+                {/* Rating Stars */}
+                <div className="flex items-center gap-1 mb-2">
+                  {renderStars(tool.rating)}
+                  <span className="text-gray-400 text-xs ml-1">({tool.rating})</span>
+                </div>
+
+                {/* Title */}
+                <h4 className="font-heading text-dark text-lg font-bold mb-2 line-clamp-1">
+                  {tool.name}
+                </h4>
+
+                {/* Description */}
+                <p className="text-gray-500 text-sm mb-3 line-clamp-2 leading-relaxed">
+                  {tool.description}
+                </p>
+
+                {/* Price and Actions */}
+                <div className="flex items-center justify-between mt-4 pt-3 border-t border-gray-100">
+                  <div>
+                    <span className="text-gray-400 text-xs line-through">
+                      {parseInt(tool.price.replace('TZS ', '').replace(',', '')) > 0 
+                        ? `TZS ${(parseInt(tool.price.replace('TZS ', '').replace(',', '')) * 1.2).toLocaleString()}`
+                        : ''}
+                    </span>
+                    <span className="text-primary font-bold text-lg block">
+                      {tool.price}
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              
             </div>
           ))}
         </div>
 
-        <div className="text-center mt-12">
-          <Link href="/hardware" className="btn-primary px-8 py-3.5 rounded-full font-semibold text-sm inline-block">
-            View Full Store →
+        {/* View All Button */}
+        <div className="text-center mt-16">
+          <Link 
+            href="/hardware" 
+            className="group btn-primary px-10 py-4 rounded-full font-semibold text-base inline-flex items-center gap-3 hover:gap-4 transition-all duration-300 shadow-lg hover:shadow-xl"
+          >
+            <span>View Full Hardware Store</span>
+            <i className="fas fa-arrow-right group-hover:translate-x-1 transition-transform duration-300"></i>
           </Link>
         </div>
       </div>
@@ -109,6 +189,20 @@ export default function HardwareStore() {
         .tool-card:hover {
           transform: translateY(-5px);
           box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .line-clamp-1 {
+          display: -webkit-box;
+          -webkit-line-clamp: 1;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+        }
+        
+        .line-clamp-2 {
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
         }
       `}</style>
     </section>
