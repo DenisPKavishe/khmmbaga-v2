@@ -103,10 +103,10 @@ export default function HardwareHero() {
               <div className="relative bg-white rounded-3xl shadow-2xl overflow-hidden border border-gray-100">
                 <div className="relative w-full h-64 sm:h-80 md:h-96 lg:h-[500px]">
                   <Image
-                    src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80"
+                    src="/images/khan.png"
                     alt="Hardware tools and equipment"
                     fill
-                    className="object-cover"
+                    className="object-fill"
                     priority
                   />
                 </div>

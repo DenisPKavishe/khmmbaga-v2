@@ -7,7 +7,7 @@ import Image from 'next/image';
 const galleryItems = [
   {
     id: 1,
-    image: 'https://images.unsplash.com/photo-1563166423-a78566af3dbe?q=80&w=1170&auto=format&fit=crop',
+    image: '/images/projects/proj.jpeg',
     title: 'Kilimanjaro Brewery Expansion',
     description: 'Complete structural reinforcement and industrial painting for Kilimanjaro Breweries. Increased production capacity by 40%.',
     date: 'Mar 2024',
@@ -16,7 +16,7 @@ const galleryItems = [
   },
   {
     id: 2,
-    image: 'https://images.unsplash.com/photo-1532562145520-b8cce2486cd2?q=80&w=1074&auto=format&fit=crop',
+    image: '/images/projects/proj1.jpeg',
     title: 'Moshi Logistics Hub Coatings',
     description: 'High-durability epoxy floor coating and fireproofing for 15,000 sqm logistics hub in Moshi.',
     date: 'Jan 2024',
@@ -25,7 +25,7 @@ const galleryItems = [
   },
   {
     id: 3,
-    image: 'https://images.unsplash.com/photo-1614127938540-a1139bee1841?q=80&w=1332&auto=format&fit=crop',
+    image: '/images/projects/proj2.jpeg',
     title: 'Serengeti Breweries Coating',
     description: 'Anti-corrosive industrial painting for processing units and storage tanks, extending equipment lifecycle by 8+ years.',
     date: 'Sep 2023',
@@ -34,7 +34,7 @@ const galleryItems = [
   },
   {
     id: 4,
-    image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80',
+    image: '/images/projects/proj3.jpeg',
     title: 'Arusha Central Business Hub',
     description: 'Full construction, modern facade painting, and supply chain management for 25,000 sqm mixed-use development.',
     date: 'Jun 2024',
@@ -43,7 +43,7 @@ const galleryItems = [
   },
   {
     id: 5,
-    image: 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=800&q=80',
+    image: '/images/projects/proj4.jpeg',
     title: 'Tanzania Distilleries Upgrade',
     description: 'High-temperature resistant coatings and structural refurbishment for distillation columns.',
     date: 'Feb 2024',
@@ -52,7 +52,7 @@ const galleryItems = [
   },
   {
     id: 6,
-    image: 'https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=800&q=80',
+    image: '/images/projects/proj5.jpeg',
     title: 'Moshi Green Valley Estate',
     description: 'Eco-friendly construction and premium supply for 50+ luxury villas with complete supply chain.',
     date: 'Apr 2024',
@@ -61,7 +61,7 @@ const galleryItems = [
   },
   {
     id: 7,
-    image: 'https://plus.unsplash.com/premium_photo-1682724602925-f0264b85953f?q=80&w=1171&auto=format&fit=crop',
+    image: '/images/projects/proj6.jpeg',
     title: 'Hardware Warehouse - Arusha',
     description: 'Our 5,000 sqm hardware warehouse stocked with premium construction tools and equipment.',
     date: 'Ongoing',
@@ -70,7 +70,7 @@ const galleryItems = [
   },
   {
     id: 8,
-    image: 'https://images.unsplash.com/photo-1712711649566-16c7cfcf341c?q=80&w=1074&auto=format&fit=crop',
+    image: '/images/projects/proj7.jpeg',
     title: 'Industrial Painting - Arusha',
     description: 'Heavy-duty industrial coating application for manufacturing facility in Arusha.',
     date: 'Aug 2024',
@@ -79,7 +79,70 @@ const galleryItems = [
   },
   {
     id: 9,
-    image: 'https://plus.unsplash.com/premium_photo-1682617326998-776d7443f02c?q=80&w=1333&auto=format&fit=crop',
+    image: '/images/projects/proj8.jpeg',
+    title: 'Scaffolding & Safety Equipment',
+    description: 'Complete scaffolding setup and safety equipment supply for high-rise construction.',
+    date: 'Ongoing',
+    tags: ['Safety Gear', 'Scaffolding'],
+    tagColors: ['bg-gray-100 text-gray-600', 'bg-purple-100 text-purple-600'],
+  },
+  {
+    id: 10,
+    image: '/images/projects/proj9.jpeg',
+    title: 'Scaffolding & Safety Equipment',
+    description: 'Complete scaffolding setup and safety equipment supply for high-rise construction.',
+    date: 'Ongoing',
+    tags: ['Safety Gear', 'Scaffolding'],
+    tagColors: ['bg-gray-100 text-gray-600', 'bg-purple-100 text-purple-600'],
+  },
+  {
+    id: 11,
+    image: '/images/projects/proj10.jpeg',
+    title: 'Scaffolding & Safety Equipment',
+    description: 'Complete scaffolding setup and safety equipment supply for high-rise construction.',
+    date: 'Ongoing',
+    tags: ['Safety Gear', 'Scaffolding'],
+    tagColors: ['bg-gray-100 text-gray-600', 'bg-purple-100 text-purple-600'],
+  },
+  {
+    id: 12,
+    image: '/images/projects/proj11.jpeg',
+    title: 'Scaffolding & Safety Equipment',
+    description: 'Complete scaffolding setup and safety equipment supply for high-rise construction.',
+    date: 'Ongoing',
+    tags: ['Safety Gear', 'Scaffolding'],
+    tagColors: ['bg-gray-100 text-gray-600', 'bg-purple-100 text-purple-600'],
+  },
+  {
+    id: 13,
+    image: '/images/projects/proj12.jpeg',
+    title: 'Scaffolding & Safety Equipment',
+    description: 'Complete scaffolding setup and safety equipment supply for high-rise construction.',
+    date: 'Ongoing',
+    tags: ['Safety Gear', 'Scaffolding'],
+    tagColors: ['bg-gray-100 text-gray-600', 'bg-purple-100 text-purple-600'],
+  },
+  {
+    id: 14,
+    image: '/images/projects/proj13.jpeg',
+    title: 'Scaffolding & Safety Equipment',
+    description: 'Complete scaffolding setup and safety equipment supply for high-rise construction.',
+    date: 'Ongoing',
+    tags: ['Safety Gear', 'Scaffolding'],
+    tagColors: ['bg-gray-100 text-gray-600', 'bg-purple-100 text-purple-600'],
+  },
+  {
+    id: 15,
+    image: '/images/projects/proj14.jpeg',
+    title: 'Scaffolding & Safety Equipment',
+    description: 'Complete scaffolding setup and safety equipment supply for high-rise construction.',
+    date: 'Ongoing',
+    tags: ['Safety Gear', 'Scaffolding'],
+    tagColors: ['bg-gray-100 text-gray-600', 'bg-purple-100 text-purple-600'],
+  },
+  {
+    id: 16,
+    image: '/images/projects/proj15.jpeg',
     title: 'Scaffolding & Safety Equipment',
     description: 'Complete scaffolding setup and safety equipment supply for high-rise construction.',
     date: 'Ongoing',
@@ -170,7 +233,7 @@ export default function GalleryGrid() {
                     </span>
                   </div>
                 </div>
-                <div className="p-4">
+                {/* <div className="p-4">
                   <h3 className="font-bold text-gray-800 text-lg">{item.title}</h3>
                   <p className="text-gray-500 text-sm mt-1">
                     {item.tags[0]} & {item.tags[1]} • {item.date}
@@ -186,7 +249,7 @@ export default function GalleryGrid() {
                       </span>
                     ))}
                   </div>
-                </div>
+                </div> */}
               </div>
             ))}
           </div>
@@ -229,7 +292,7 @@ export default function GalleryGrid() {
                 className="object-contain rounded-2xl shadow-2xl"
               />
             </div>
-            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6 rounded-b-2xl">
+            {/* <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6 rounded-b-2xl">
               <h3 className="text-white text-xl font-bold mb-2">{selectedImage.title}</h3>
               <p className="text-gray-300 text-sm">{selectedImage.description}</p>
               <div className="flex gap-2 mt-3">
@@ -239,7 +302,7 @@ export default function GalleryGrid() {
                   </span>
                 ))}
               </div>
-            </div>
+            </div> */}
             <button
               onClick={closeLightbox}
               className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-white/20 backdrop-blur-md hover:bg-orange-500 text-white px-6 py-2 rounded-full transition-all duration-300 text-sm"

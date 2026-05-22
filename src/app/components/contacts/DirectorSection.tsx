@@ -53,13 +53,16 @@ export default function DirectorSection() {
 
         <div className="flex flex-col lg:flex-row gap-12 items-center">
           <div className="lg:w-1/2 director-img-wrapper rounded-3xl shadow-2xl reveal-director transition-all duration-700 relative" style={{ transitionDelay: '100ms' }}>
-            <Image
-              src="/images/khan.png"
-              alt="Managing Director - Tanzania Construction"
-              width={500}
-              height={600}
-              className="w-full h-auto object-cover rounded-3xl"
-            />
+            <div className="relative w-full h-96 md:h-[500px] lg:h-[550px]">
+              <Image
+                src="/images/khan.png"
+                alt="Managing Director - Tanzania Construction"
+                fill
+                className="object-cover object-top rounded-3xl"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                priority
+              />
+            </div>
             <div className="absolute bottom-6 left-6 bg-white/95 backdrop-blur-md rounded-xl px-4 py-2 shadow-lg">
               <i className="fas fa-quote-left text-orange-500 text-xl"></i>
               <p className="text-gray-800 font-semibold text-sm">"Quality is our foundation"</p>

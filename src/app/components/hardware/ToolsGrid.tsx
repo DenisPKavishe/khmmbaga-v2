@@ -6,48 +6,160 @@ import Image from 'next/image';
 const tools = [
   {
     id: 1,
-    image: 'https://images.unsplash.com/photo-1690719744562-249937b9c03a?q=80&w=1170&auto=format&fit=crop',
-    name: 'Portable Concrete Mixer',
+    image: '/images/brush.jpeg',
+    name: 'Painting Brush',
     description: '350L capacity, electric motor, heavy-duty drum, ideal for small to medium construction sites.',
     price: 450000,
     delay: 100,
   },
   {
     id: 2,
-    image: 'https://images.unsplash.com/photo-1665631153909-ae7a1b6c137f?q=80&w=687&auto=format&fit=crop',
-    name: 'Heavy Duty Jackhammer',
+    image: '/images/roller.jpeg',
+    name: 'Painting rollers',
     description: '1500W electric, anti-vibration system, includes 3 chisel bits. Perfect for demolition work.',
     price: 850000,
     delay: 200,
   },
   {
     id: 3,
-    image: 'https://images.unsplash.com/photo-1708201267130-46d12abe74cf?q=80&w=387&auto=format&fit=crop',
-    name: 'Inverter Welding Machine',
+    image: '/images/hammer.jpeg',
+    name: 'Hammer',
     description: '200A output, digital display, portable design. Includes electrode holder & cables.',
     price: 320000,
     delay: 300,
   },
   {
     id: 4,
-    image: 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-    name: 'Scaffolding Set (Complete)',
+    image: '/images/mabati.jpeg',
+    name: 'Roof Sheets(Mabati)',
     description: 'Complete set: frames, braces, planks, casters. 6m height capacity. Galvanized steel.',
     price: 1250000,
     delay: 400,
   },
   {
     id: 5,
-    image: 'https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-    name: 'Power Trowel / Floor Finisher',
+    image: '/images/bindingwire.jpeg',
+    name: 'Binding Wire',
     description: '36-inch diameter, petrol engine, adjustable pitch, perfect for concrete floor finishing.',
     price: 680000,
     delay: 500,
   },
   {
     id: 6,
-    image: 'https://images.unsplash.com/photo-1562601622-8ec34f65aed5?q=80&w=735&auto=format&fit=crop',
-    name: 'Rotary Laser Level Kit',
+    image: '/images/bawaba&kufuli.jpeg',
+    name: 'Hingers & Locks',
+    description: 'Self-leveling, 360° rotation, includes receiver and tripod. High accuracy for grading.',
+    price: 520000,
+    delay: 600,
+  },
+  {
+    id: 7,
+    image: '/images/cements.jpeg',
+    name: 'Cements',
+    description: 'Self-leveling, 360° rotation, includes receiver and tripod. High accuracy for grading.',
+    price: 520000,
+    delay: 600,
+  },
+  {
+    id: 8,
+    image: '/images/nondo.jpeg',
+    name: 'Steel Bars/Rebars',
+    description: 'Self-leveling, 360° rotation, includes receiver and tripod. High accuracy for grading.',
+    price: 520000,
+    delay: 600,
+  },
+  {
+    id: 9,
+    image: '/images/pliers.jpeg',
+    name: 'Pliers',
+    description: 'Self-leveling, 360° rotation, includes receiver and tripod. High accuracy for grading.',
+    price: 520000,
+    delay: 600,
+  },
+  {
+    id: 10,
+    image: '/images/misumari.jpeg',
+    name: 'Nails(Misumari)',
+    description: 'Self-leveling, 360° rotation, includes receiver and tripod. High accuracy for grading.',
+    price: 520000,
+    delay: 600,
+  },
+  {
+    id: 11,
+    image: '/images/screws.jpeg',
+    name: 'Screws',
+    description: 'Self-leveling, 360° rotation, includes receiver and tripod. High accuracy for grading.',
+    price: 520000,
+    delay: 600,
+  },
+  {
+    id: 12,
+    image: '/images/tapemeasure.jpeg',
+    name: 'Tape Measure',
+    description: 'Self-leveling, 360° rotation, includes receiver and tripod. High accuracy for grading.',
+    price: 520000,
+    delay: 600,
+  },
+  {
+    id: 13,
+    image: '/images/weatherguard.jpeg',
+    name: 'Weather Guard',
+    description: 'Self-leveling, 360° rotation, includes receiver and tripod. High accuracy for grading.',
+    price: 520000,
+    delay: 600,
+  },
+  {
+    id: 14,
+    image: '/images/pva.jpeg',
+    name: 'PVA',
+    description: 'Self-leveling, 360° rotation, includes receiver and tripod. High accuracy for grading.',
+    price: 520000,
+    delay: 600,
+  },
+  {
+    id: 15,
+    image: '/images/2kpaints.jpeg',
+    name: '2K Paints',
+    description: 'Self-leveling, 360° rotation, includes receiver and tripod. High accuracy for grading.',
+    price: 520000,
+    delay: 600,
+  },
+  {
+    id: 16,
+    image: '/images/solvent.jpeg',
+    name: 'Solvent',
+    description: 'Self-leveling, 360° rotation, includes receiver and tripod. High accuracy for grading.',
+    price: 520000,
+    delay: 600,
+  },
+  {
+    id: 17,
+    image: '/images/hardener.jpeg',
+    name: 'Hardener',
+    description: 'Self-leveling, 360° rotation, includes receiver and tripod. High accuracy for grading.',
+    price: 520000,
+    delay: 600,
+  },
+  {
+    id: 18,
+    image: '/images/masking tape.jpeg',
+    name: 'Masking Tape',
+    description: 'Self-leveling, 360° rotation, includes receiver and tripod. High accuracy for grading.',
+    price: 520000,
+    delay: 600,
+  },
+  {
+    id: 19,
+    image: '/images/skimmingPutty.jpeg',
+    name: 'Skimming Putty',
+    description: 'Self-leveling, 360° rotation, includes receiver and tripod. High accuracy for grading.',
+    price: 520000,
+    delay: 600,
+  },
+  {
+    id: 20,
+    image: '/images/white cement.jpeg',
+    name: 'White Cement',
     description: 'Self-leveling, 360° rotation, includes receiver and tripod. High accuracy for grading.',
     price: 520000,
     delay: 600,
@@ -144,7 +256,7 @@ export default function ToolsGrid() {
                   src={tool.image}
                   alt={tool.name}
                   fill
-                  className="object-cover transition-transform duration-500 hover:scale-110"
+                  className="object-fill transition-transform duration-500 hover:scale-100"
                 />
               </div>
               <div className="p-5">
@@ -152,7 +264,7 @@ export default function ToolsGrid() {
                   <h3 className="text-xl font-bold text-gray-800">{tool.name}</h3>
                   <span className="text-orange-600 font-bold text-lg">{formatCurrency(tool.price)}</span>
                 </div>
-                <p className="text-gray-500 text-sm mb-4">{tool.description}</p>
+                {/* <p className="text-gray-500 text-sm mb-4">{tool.description}</p> */}
                 <div className="flex items-center justify-between mt-4 pt-3 border-t border-gray-100">
                   <span className="text-gray-700 font-medium">Quantity:</span>
                   <div className="flex items-center gap-3">

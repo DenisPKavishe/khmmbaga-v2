@@ -21,7 +21,7 @@ export default function Home() {
       <AboutSection />
       <ServicesBanner />
       <ServicesGrid />
-      <ProjectsSection />
+      {/* <ProjectsSection /> */}
       <GallerySection />
       <HardwareStore />
       <Testimonials />

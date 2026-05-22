@@ -47,7 +47,7 @@ export default function ContactSection() {
             {[
               { icon: 'fas fa-map-marker-alt', label: 'Address', value: 'P.O.Box 999, Arusha, Tanzania' },
               { icon: 'fas fa-phone', label: 'Phone', value: '+255 766 689 136' },
-              { icon: 'fas fa-envelope', label: 'Email', value: 'info@khmmbaga.co.tz' },
+              { icon: 'fas fa-envelope', label: 'Email', value: 'khmmbagacompanyltd' },
               { icon: 'fas fa-clock', label: 'Working Hours', value: 'Mon – Sat: 7:00 AM – 6:00 PM' },
             ].map((item, index) => (
               <div
