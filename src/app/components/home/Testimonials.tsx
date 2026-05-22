@@ -7,7 +7,7 @@ const testimonials = [
   {
     rating: 5,
     text: "KH MMBAGA turned our commercial vision into reality ahead of schedule. Their attention to detail and proactive communication made the entire project a pleasure. I would not trust anyone else.",
-    name: "James Mwangi",
+    name: "Kaniki",
     title: "Director, Mwangi Holdings",
     image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=120&q=80",
     delay: 100,
@@ -15,7 +15,7 @@ const testimonials = [
   {
     rating: 5,
     text: "From architecture to handover, the KH MMBAGA team was professional, honest, and genuinely talented. Our warehouse facility exceeded every expectation we had set going in.",
-    name: "Amina Saleh",
+    name: "Allan",
     title: "CEO, Saleh Logistics",
     image: "https://plus.unsplash.com/premium_photo-1671656349322-41de944d259b?w=120&q=80",
     delay: 200,
@@ -23,7 +23,7 @@ const testimonials = [
   {
     rating: 4.5,
     text: "The renovation of our villa was handled with extraordinary care and craftsmanship. KH MMBAGA's team respected our home and delivered a result we are incredibly proud of.",
-    name: "David Kimaro",
+    name: "Kali",
     title: "Homeowner, Arusha",
     image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=120&q=80",
     delay: 300,
@@ -109,7 +109,7 @@ export default function Testimonials() {
                 </div>
                 <div>
                   <div className="font-bold text-dark text-sm">{testimonial.name}</div>
-                  <div className="text-primary text-xs font-medium">{testimonial.title}</div>
+                  {/* <div className="text-primary text-xs font-medium">{testimonial.title}</div> */}
                 </div>
               </div>
             </div>

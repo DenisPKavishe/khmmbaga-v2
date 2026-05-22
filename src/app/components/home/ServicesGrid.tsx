@@ -9,42 +9,42 @@ const services = [
     title: 'Architecture & Design',
     description:
       'Our architects blend functionality and aesthetics to create spaces that inspire from initial sketches to final blueprints.',
-    link: '/contact',
+    
   },
   {
     icon: 'fas fa-building',
     title: 'General Construction',
     description:
       'Full cycle construction management for residential, commercial, and mixed-use developments delivered on time and within budget.',
-    link: '/contact',
+    
   },
   {
     icon: 'fas fa-wrench',
     title: 'Renovation & Remodeling',
     description:
       'Breathing new life into existing structures from complete gut renovations to targeted upgrades that add real value.',
-    link: '/contact',
+    
   },
   {
     icon: 'fas fa-industry',
     title: 'Industrial Services',
     description:
       'Factories, warehouses, power plants our industrial division handles the most demanding construction challenges with ease.',
-    link: '/contact',
+    
   },
   {
     icon: 'fas fa-truck',
     title: 'Material Supply',
     description:
       'Premium construction materials, tools, safety equipment reliable supply chain for projects of any scale.',
-    link: '/hardware',
+   
   },
   {
     icon: 'fas fa-tools',
     title: 'Maintenance & Repair',
     description:
       'Preventive maintenance, rapid response repairs, and long term facility management keeping your assets performing at their best.',
-    link: '/contact',
+    
   },
 ];
 
@@ -105,9 +105,6 @@ export default function ServicesGrid() {
               </div>
               <h3 className="font-heading text-dark text-xl font-bold mb-3">{service.title}</h3>
               <p className="text-gray-500 text-sm leading-relaxed mb-5">{service.description}</p>
-              <Link href={service.link} className="text-primary font-semibold text-sm hover:text-secondary transition-colors">
-                Read More →
-              </Link>
             </div>
           ))}
         </div>

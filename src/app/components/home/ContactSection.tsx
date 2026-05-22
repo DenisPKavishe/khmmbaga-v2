@@ -1,5 +1,6 @@
 "use client";
 
+import Link from 'next/link';
 import { useInView } from 'react-intersection-observer';
 
 export default function ContactSection() {
@@ -71,14 +72,13 @@ export default function ContactSection() {
               inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
             }`}
           >
-            <a
-              href="tel:+255766689136"
-              className="btn-primary inline-flex items-center gap-3 px-8 py-4 rounded-full font-semibold text-base hover:scale-105 transition-all duration-300"
-            >
+            <Link
+            href="/contact"
+            className="btn-primary inline-flex items-center gap-3 px-8 py-4 rounded-full font-semibold text-base hover:scale-105 transition-all duration-300">
               <i className="fas fa-phone-alt"></i>
               Call Us Now
               <i className="fas fa-arrow-right"></i>
-            </a>
+            </Link>
           </div>
         </div>
       </div>

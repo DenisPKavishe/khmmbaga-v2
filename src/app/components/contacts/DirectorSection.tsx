@@ -117,14 +117,8 @@ export default function DirectorSection() {
             </div>
 
             <div className="flex gap-4 pt-2">
-              <a href="#" className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-gray-600 hover:bg-orange-500 hover:text-white transition-all hover:scale-110">
-                <i className="fab fa-linkedin-in"></i>
-              </a>
-              <a href="#" className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-gray-600 hover:bg-orange-500 hover:text-white transition-all hover:scale-110">
-                <i className="fab fa-twitter"></i>
-              </a>
-              <a href="#" className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-gray-600 hover:bg-orange-500 hover:text-white transition-all hover:scale-110">
-                <i className="fab fa-facebook-f"></i>
+              <a href="https://wa.me/255766689136" className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-gray-600 hover:bg-orange-500 hover:text-white transition-all hover:scale-110">
+                <i className="fab fa-whatsapp"></i>
               </a>
             </div>
           </div>

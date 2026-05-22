@@ -39,9 +39,9 @@ export default function AboutCTA() {
           <p className="text-orange-100 text-lg max-w-2xl mx-auto mb-8">
             From large-scale brewery constructions to high-end industrial projects see how we transform visions into reality.
           </p>
-          <Link href="/projects">
+          <Link href="/gallery">
             <button className="bg-white text-orange-600 font-bold py-3 px-10 rounded-full text-xl shadow-2xl hover:bg-gray-100 transition-all duration-300 hover:scale-105 inline-flex items-center gap-3 group">
-              <i className="fas fa-folder-open group-hover:animate-bounce-subtle"></i> View Full Project Folder
+              <i className="fas fa-folder-open group-hover:animate-bounce-subtle"></i> View Full Gallery Folder
               <i className="fas fa-external-link-alt text-sm"></i>
             </button>
           </Link>

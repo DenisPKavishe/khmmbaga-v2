@@ -30,16 +30,16 @@ export default function Footer() {
               Building greatness since 2026. KH MMBAGA is Tanzania's trusted partner for construction, renovation, industrial services, and premium material supply.
             </p>
             <div className="flex gap-3">
-              <a href="#" className="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-gray-400 hover:bg-primary hover:text-white transition-all text-sm">
+              {/* <a href="#" className="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-gray-400 hover:bg-primary hover:text-white transition-all text-sm">
                 <i className="fab fa-facebook-f"></i>
               </a>
               <a href="#" className="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-gray-400 hover:bg-primary hover:text-white transition-all text-sm">
                 <i className="fab fa-twitter"></i>
-              </a>
+              </a> */}
               <a href="#" className="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-gray-400 hover:bg-primary hover:text-white transition-all text-sm">
                 <i className="fab fa-instagram"></i>
               </a>
-              <a href="#" className="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-gray-400 hover:bg-primary hover:text-white transition-all text-sm">
+              <a href="https://wa.me/255766689136" className="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-gray-400 hover:bg-primary hover:text-white transition-all text-sm">
                 <i className="fab fa-whatsapp"></i>
               </a>
             </div>
@@ -85,7 +85,7 @@ export default function Footer() {
               </li>
               <li className="flex gap-3 text-gray-400 text-sm">
                 <i className="fas fa-envelope text-primary mt-0.5 w-4 flex-shrink-0"></i>
-                khmmbagacompanyltd@gmail.com
+                <a href="mailto:khmmbagacompanyltd@gmail.com">khmmbagacompanyltd@gmail.com</a>
               </li>
               <li className="flex gap-3 text-gray-400 text-sm">
                 <i className="fas fa-clock text-primary mt-0.5 w-4 flex-shrink-0"></i>

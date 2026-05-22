@@ -84,7 +84,7 @@ export default function AboutSection() {
               inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
             }`}
           >
-            <Link href="/ourservice">
+            <Link href="/services">
               <div className="flex items-center gap-3 cursor-pointer group">
                 <div className="relative">
                   <div className="w-12 h-12 rounded-full border-2 border-primary flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
