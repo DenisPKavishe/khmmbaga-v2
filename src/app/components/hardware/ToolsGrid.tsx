@@ -9,7 +9,7 @@ const tools = [
     image: '/images/brush.jpeg',
     name: 'Painting Brush',
     description: 'High-quality painting brush for smooth finish, ideal for all paint types.',
-    price: 450000,
+    price: 4000,
     delay: 100,
   },
   {
@@ -17,7 +17,7 @@ const tools = [
     image: '/images/roller.jpeg',
     name: 'Painting Rollers',
     description: 'Professional painting rollers, easy to use, perfect for large surface areas.',
-    price: 850000,
+    price: 5000,
     delay: 200,
   },
   {
@@ -25,7 +25,7 @@ const tools = [
     image: '/images/hammer.jpeg',
     name: 'Hammer',
     description: 'Heavy-duty hammer with ergonomic handle, ideal for construction work.',
-    price: 320000,
+    price: 20000,
     delay: 300,
   },
   {
@@ -33,7 +33,7 @@ const tools = [
     image: '/images/mabati.jpeg',
     name: 'Roof Sheets (Mabati)',
     description: 'High-quality galvanized iron sheets, durable and weather-resistant.',
-    price: 1250000,
+    price: 32000,
     delay: 400,
   },
   {
@@ -41,7 +41,7 @@ const tools = [
     image: '/images/bindingwire.jpeg',
     name: 'Binding Wire',
     description: 'Strong and flexible binding wire for construction reinforcement.',
-    price: 680000,
+    price: 25000,
     delay: 500,
   },
   {
@@ -49,7 +49,7 @@ const tools = [
     image: '/images/bawaba&kufuli.jpeg',
     name: 'Hinges & Locks',
     description: 'Premium quality hinges and locks for doors and windows.',
-    price: 520000,
+    price: 45000,
     delay: 600,
   },
   {
@@ -57,111 +57,143 @@ const tools = [
     image: '/images/cements.jpeg',
     name: 'Cements',
     description: 'Quality Portland cement for all construction needs.',
-    price: 520000,
+    price: 20000,
     delay: 600,
   },
   {
     id: 8,
     image: '/images/nondo.jpeg',
-    name: 'Steel Bars/Rebars',
+    name: 'Steel Bars (1 Millimeter)',
     description: 'High-tensile steel bars for concrete reinforcement.',
-    price: 520000,
+    price: 18000,
     delay: 600,
   },
   {
     id: 9,
-    image: '/images/pliers.jpeg',
-    name: 'Pliers',
-    description: 'Durable pliers with comfortable grip for various applications.',
-    price: 520000,
+    image: '/images/nondo.jpeg',
+    name: 'Steel Bars (2 Millimeter)',
+    description: 'High-tensile steel bars for concrete reinforcement.',
+    price: 25000,
     delay: 600,
   },
   {
     id: 10,
-    image: '/images/misumari.jpeg',
-    name: 'Nails (Misumari)',
-    description: 'Assorted sizes of high-quality construction nails.',
-    price: 520000,
+    image: '/images/nondo.jpeg',
+    name: 'Steel Bars (3 Millimeter)',
+    description: 'High-tensile steel bars for concrete reinforcement.',
+    price: 37000,
     delay: 600,
   },
   {
     id: 11,
-    image: '/images/screws.jpeg',
-    name: 'Screws',
-    description: 'Stainless steel screws for durable fastening.',
-    price: 520000,
+    image: '/images/nondo.jpeg',
+    name: 'Steel Bars (4 Millimeter)',
+    description: 'High-tensile steel bars for concrete reinforcement.',
+    price: 52000,
     delay: 600,
   },
   {
     id: 12,
-    image: '/images/tapemeasure.jpeg',
-    name: 'Tape Measure',
-    description: 'Professional grade tape measure with metric and imperial units.',
-    price: 520000,
+    image: '/images/pliers.jpeg',
+    name: 'Pliers',
+    description: 'Durable pliers with comfortable grip for various applications.',
+    price: 15000,
     delay: 600,
   },
   {
     id: 13,
-    image: '/images/weatherguard.jpeg',
-    name: 'Weather Guard',
-    description: 'Protective coating for exterior surfaces, weather-resistant.',
-    price: 520000,
+    image: '/images/misumari.jpeg',
+    name: 'Nails (Misumari)',
+    description: 'Assorted sizes of high-quality construction nails.',
+    price: 5000,
     delay: 600,
   },
   {
     id: 14,
-    image: '/images/pva.jpeg',
-    name: 'PVA',
-    description: 'Premium quality PVA adhesive for various applications.',
-    price: 520000,
+    image: '/images/screws.jpeg',
+    name: 'Screws',
+    description: 'Stainless steel screws for durable fastening.',
+    price: 15000,
     delay: 600,
   },
   {
     id: 15,
-    image: '/images/2kpaints.jpeg',
-    name: '2K Paints',
-    description: 'High-durability 2K paint system for industrial applications.',
-    price: 520000,
+    image: '/images/tapemeasure.jpeg',
+    name: 'Tape Measure',
+    description: 'Professional grade tape measure with metric and imperial units.',
+    price: 15000,
     delay: 600,
   },
   {
     id: 16,
-    image: '/images/solvent.jpeg',
-    name: 'Solvent',
-    description: 'Industrial grade solvent for paint thinning and cleaning.',
-    price: 520000,
+    image: '/images/weatherguard.jpeg',
+    name: 'Weather Guard (20 liters)',
+    description: 'Protective coating for exterior surfaces, weather-resistant.',
+    price: 160000,
     delay: 600,
   },
   {
     id: 17,
-    image: '/images/hardener.jpeg',
-    name: 'Hardener',
-    description: 'Paint hardener for 2K paint systems, ensures durability.',
-    price: 520000,
+    image: '/images/weatherguard.jpeg',
+    name: 'Weather Guard (10 liters)',
+    description: 'Protective coating for exterior surfaces, weather-resistant.',
+    price: 80000,
     delay: 600,
   },
   {
     id: 18,
-    image: '/images/masking tape.jpeg',
-    name: 'Masking Tape',
-    description: 'Professional masking tape for clean paint lines.',
-    price: 520000,
+    image: '/images/pva.jpeg',
+    name: 'PVA',
+    description: 'Premium quality PVA adhesive for various applications.',
+    price: 25000,
     delay: 600,
   },
   {
     id: 19,
-    image: '/images/skimmingPutty.jpeg',
-    name: 'Skimming Putty',
-    description: 'Smooth finishing putty for wall surfaces.',
-    price: 520000,
+    image: '/images/2kpaints.jpeg',
+    name: '2K Paints',
+    description: 'High-durability 2K paint system for industrial applications.',
+    price: 67000,
     delay: 600,
   },
   {
     id: 20,
+    image: '/images/solvent.jpeg',
+    name: 'Solvent',
+    description: 'Industrial grade solvent for paint thinning and cleaning.',
+    price: 4000,
+    delay: 600,
+  },
+  {
+    id: 21,
+    image: '/images/hardener.jpeg',
+    name: 'Hardener',
+    description: 'Paint hardener for 2K paint systems, ensures durability.',
+    price: 32000,
+    delay: 600,
+  },
+  {
+    id: 22,
+    image: '/images/masking tape.jpeg',
+    name: 'Masking Tape',
+    description: 'Professional masking tape for clean paint lines.',
+    price: 3000,
+    delay: 600,
+  },
+  {
+    id: 23,
+    image: '/images/skimmingPutty.jpeg',
+    name: 'Skimming Putty',
+    description: 'Smooth finishing putty for wall surfaces.',
+    price: 25000,
+    delay: 600,
+  },
+  {
+    id: 24,
     image: '/images/white cement.jpeg',
     name: 'White Cement',
     description: 'Premium white cement for decorative finishes.',
-    price: 520000,
+    price: 35000,
     delay: 600,
   },
 ];
@@ -191,22 +223,22 @@ function PopupNotification({ type, title, message, onClose }: PopupProps) {
   const getIcon = () => {
     switch (type) {
       case 'success':
-        return <i className="fas fa-check-circle text-green-500 text-5xl"></i>;
+        return <i className="fas fa-check-circle text-orange-500 text-5xl"></i>;
       case 'error':
         return <i className="fas fa-exclamation-circle text-red-500 text-5xl"></i>;
       default:
-        return <i className="fas fa-info-circle text-blue-500 text-5xl"></i>;
+        return <i className="fas fa-info-circle text-orange-500 text-5xl"></i>;
     }
   };
 
   const getBgColor = () => {
     switch (type) {
       case 'success':
-        return 'border-green-500 bg-green-50';
+        return 'border-orange-500 bg-green-50';
       case 'error':
         return 'border-red-500 bg-red-50';
       default:
-        return 'border-blue-500 bg-blue-50';
+        return 'border-orange-500 bg-blue-50';
     }
   };
 

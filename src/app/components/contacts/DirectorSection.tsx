@@ -55,7 +55,7 @@ export default function DirectorSection() {
           <div className="lg:w-1/2 director-img-wrapper rounded-3xl shadow-2xl reveal-director transition-all duration-700 relative" style={{ transitionDelay: '100ms' }}>
             <div className="relative w-full h-96 md:h-[500px] lg:h-[550px]">
               <Image
-                src="/images/khan.png"
+                src="/images/kb.jpeg"
                 alt="Managing Director - Tanzania Construction"
                 fill
                 className="object-cover object-top rounded-3xl"

@@ -78,101 +78,106 @@ export default function HeroCarousel() {
   }, [resetTimer]);
 
   return (
-    <section id="home" className="relative h-screen min-h-[680px] overflow-hidden">
-      {slides.map((slide, index) => (
-        <div
-          key={slide.id}
-          className={`absolute inset-0 transition-opacity duration-1000 ${
-            currentSlide === index ? 'opacity-100 z-10' : 'opacity-0 z-0'
-          }`}
-        >
-          <Image
-            src={slide.image}
-            alt={slide.tagline}
-            fill
-            priority={index === 0}
-            className="object-cover"
-          />
+    <>
+      <section 
+        id="home" 
+        className="relative w-full h-[80vh] min-h-[500px] md:h-screen md:min-h-[680px] overflow-hidden"
+      >
+        {slides.map((slide, index) => (
           <div
-            className="absolute inset-0"
-            style={{
-              background: 'linear-gradient(90deg, rgba(26,26,26,0.78) 0%, rgba(0,0,0,0.35) 100%)',
-            }}
-          />
-          <div className="absolute inset-0 flex items-center">
-            <div className="max-w-7xl mx-auto px-8 lg:px-16 w-full">
-              <p
-                className={`text-primary uppercase tracking-[4px] text-sm font-semibold mb-4 transition-all duration-700 delay-300 ${
-                  currentSlide === index
-                    ? 'opacity-100 translate-y-0'
-                    : 'opacity-0 translate-y-10'
-                }`}
-              >
-                {slide.tagline}
-              </p>
-              <h1
-                className={`font-heading text-white text-5xl lg:text-7xl font-black leading-tight max-w-xl mb-6 whitespace-pre-line transition-all duration-700 delay-400 ${
-                  currentSlide === index
-                    ? 'opacity-100 translate-y-0'
-                    : 'opacity-0 translate-y-10'
-                }`}
-              >
-                {slide.title}
-              </h1>
-              <p
-                className={`text-gray-300 text-lg max-w-lg leading-relaxed mb-8 transition-all duration-700 delay-500 ${
-                  currentSlide === index
-                    ? 'opacity-100 translate-y-0'
-                    : 'opacity-0 translate-y-8'
-                }`}
-              >
-                {slide.description}
-              </p>
-              <div
-                className={`flex flex-wrap gap-4 transition-all duration-700 delay-600 ${
-                  currentSlide === index
-                    ? 'opacity-100 translate-y-0'
-                    : 'opacity-0 translate-y-5'
-                }`}
-              >
-                <Link
-                  href={slide.primaryBtn.link}
-                  className="btn-primary px-8 py-3.5 rounded-full font-semibold text-sm tracking-wide inline-block"
+            key={slide.id}
+            className={`absolute inset-0 transition-opacity duration-1000 ${
+              currentSlide === index ? 'opacity-100 z-10' : 'opacity-0 z-0'
+            }`}
+          >
+            <Image
+              src={slide.image}
+              alt={slide.tagline}
+              fill
+              priority={index === 0}
+              className="object-cover"
+            />
+            <div
+              className="absolute inset-0"
+              style={{
+                background: 'linear-gradient(90deg, rgba(26,26,26,0.78) 0%, rgba(0,0,0,0.35) 100%)',
+              }}
+            />
+            <div className="absolute inset-0 flex items-center">
+              <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-16 w-full">
+                <p
+                  className={`text-primary uppercase tracking-[4px] text-xs sm:text-sm font-semibold mb-3 sm:mb-4 transition-all duration-700 delay-300 ${
+                    currentSlide === index
+                      ? 'opacity-100 translate-y-0'
+                      : 'opacity-0 translate-y-10'
+                  }`}
                 >
-                  {slide.primaryBtn.text}
-                </Link>
-                <Link
-                  href={slide.secondaryBtn.link}
-                  className="btn-outline px-8 py-3.5 rounded-full font-semibold text-sm tracking-wide inline-block"
+                  {slide.tagline}
+                </p>
+                <h1
+                  className={`font-heading text-white text-4xl sm:text-5xl lg:text-7xl font-black leading-tight max-w-xl mb-4 sm:mb-6 whitespace-pre-line transition-all duration-700 delay-400 ${
+                    currentSlide === index
+                      ? 'opacity-100 translate-y-0'
+                      : 'opacity-0 translate-y-10'
+                  }`}
                 >
-                  {slide.secondaryBtn.text}
-                </Link>
+                  {slide.title}
+                </h1>
+                <p
+                  className={`text-gray-300 text-base sm:text-lg max-w-lg leading-relaxed mb-6 sm:mb-8 transition-all duration-700 delay-500 ${
+                    currentSlide === index
+                      ? 'opacity-100 translate-y-0'
+                      : 'opacity-0 translate-y-8'
+                  }`}
+                >
+                  {slide.description}
+                </p>
+                <div
+                  className={`flex flex-wrap gap-3 sm:gap-4 transition-all duration-700 delay-600 ${
+                    currentSlide === index
+                      ? 'opacity-100 translate-y-0'
+                      : 'opacity-0 translate-y-5'
+                  }`}
+                >
+                  <Link
+                    href={slide.primaryBtn.link}
+                    className="btn-primary px-6 sm:px-8 py-2.5 sm:py-3.5 rounded-full font-semibold text-xs sm:text-sm tracking-wide inline-block"
+                  >
+                    {slide.primaryBtn.text}
+                  </Link>
+                  <Link
+                    href={slide.secondaryBtn.link}
+                    className="btn-outline px-6 sm:px-8 py-2.5 sm:py-3.5 rounded-full font-semibold text-xs sm:text-sm tracking-wide inline-block"
+                  >
+                    {slide.secondaryBtn.text}
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      ))}
-
-      {/* Carousel Dots */}
-      <div className="absolute bottom-28 left-1/2 -translate-x-1/2 flex gap-3 z-20">
-        {slides.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => goToSlide(index)}
-            className={`transition-all duration-300 ${
-              currentSlide === index
-                ? 'w-8 h-2.5 bg-primary rounded-full'
-                : 'w-2.5 h-2.5 bg-white/40 rounded-full hover:bg-white/60'
-            }`}
-          />
         ))}
-      </div>
 
-      {/* Progress Bar */}
-      <div 
-        className="absolute bottom-0 left-0 h-1 z-20 bg-primary transition-all duration-16"
-        style={{ width: `${progress}%` }}
-      />
-    </section>
+        {/* Carousel Dots */}
+        <div className="absolute bottom-6 sm:bottom-28 left-1/2 -translate-x-1/2 flex gap-2 sm:gap-3 z-20">
+          {slides.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => goToSlide(index)}
+              className={`transition-all duration-300 ${
+                currentSlide === index
+                  ? 'w-6 sm:w-8 h-2 sm:h-2.5 bg-primary rounded-full'
+                  : 'w-2 h-2 sm:w-2.5 sm:h-2.5 bg-white/40 rounded-full hover:bg-white/60'
+              }`}
+            />
+          ))}
+        </div>
+
+        {/* Progress Bar */}
+        <div 
+          className="absolute bottom-0 left-0 h-1 z-20 bg-primary transition-all duration-16"
+          style={{ width: `${progress}%` }}
+        />
+      </section>
+    </>
   );
 }
