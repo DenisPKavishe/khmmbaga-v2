@@ -10,7 +10,7 @@ const tools = [
     image: 'https://images.unsplash.com/photo-1586864387967-d02ef85d93e8?q=80&w=1470&auto=format&fit=crop',
     name: 'Professional Hammer',
     description: 'Heavy-duty hammer with fiberglass handle, ideal for construction and demolition work.',
-    price: 'TZS 85,000',
+    price: 'TZS 20,000',
     category: 'Hand Tools',
     rating: 4.5,
     delay: 100,
@@ -19,16 +19,16 @@ const tools = [
     image: '/images/mabati.jpeg',
     name: 'Premium Roof Sheets',
     description: 'High-quality galvanized iron sheets, corrosion-resistant, available in various colors and sizes.',
-    price: 'TZS 65,000',
+    price: 'TZS 32,000',
     category: 'Roofing Materials',
     rating: 4.8,
     delay: 200,
   },
   {
-    image: 'https://plus.unsplash.com/premium_photo-1681989493328-0e5301879a4f?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c2FmZXR5JTIwaGVsbWVudHxlbnwwfHwwfHx8MA%3D%3D',
-    name: 'Safety Helmet',
-    description: 'EN397 certified hard hat with adjustable fit, superior impact protection for full site safety.',
-    price: 'TZS 18,000',
+    image: 'https://images.unsplash.com/photo-1703756291638-b1774ae3c186?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8dGFwZSUyMG1lYXN1cmV8ZW58MHx8MHx8fDA%3D',
+    name: 'Tape Measure',
+    description: 'Professional grade tape measure with metric and imperial units.',
+    price: 'TZS 15,000',
     category: 'Safety Gear',
     rating: 4.7,
     delay: 300,
@@ -37,7 +37,7 @@ const tools = [
     image: 'https://images.unsplash.com/photo-1632129402289-8a3190ed7a9e?w=800&auto=format&fit=crop&q=60',
     name: 'Steel Reinforcement Bars',
     description: 'High-tensile steel bars for concrete reinforcement, meeting international standards.',
-    price: 'TZS 120,000',
+    price: 'TZS 52,000',
     category: 'Steel Materials',
     rating: 4.9,
     delay: 400,
@@ -153,11 +153,6 @@ export default function HardwareStore() {
                 {/* Price and Actions */}
                 <div className="flex items-center justify-between mt-4 pt-3 border-t border-gray-100">
                   <div>
-                    <span className="text-gray-400 text-xs line-through">
-                      {parseInt(tool.price.replace('TZS ', '').replace(',', '')) > 0 
-                        ? `TZS ${(parseInt(tool.price.replace('TZS ', '').replace(',', '')) * 1.2).toLocaleString()}`
-                        : ''}
-                    </span>
                     <span className="text-primary font-bold text-lg block">
                       {tool.price}
                     </span>
