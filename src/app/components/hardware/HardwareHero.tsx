@@ -189,14 +189,6 @@ export default function HardwareHero() {
                     : "opacity-0 translate-y-10"
                 }`}
               >
-                {/* View Certification Button */}
-                <button
-                  onClick={() => setShowCertificate(true)}
-                  className="px-5 sm:px-6 md:px-8 py-2.5 sm:py-3 md:py-4 bg-gradient-to-r from-orange-500 to-orange-600 rounded-full text-white font-semibold text-sm sm:text-base shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 flex items-center gap-2"
-                >
-                  View Certification
-                  <i className="fas fa-file-pdf text-xs sm:text-sm"></i>
-                </button>
 
                 {/* WhatsApp Button */}
                 <button
@@ -271,57 +263,6 @@ export default function HardwareHero() {
             </div>
           </div>
         </div>
-
-        {/* Certificate Popup */}
-        {showCertificate && (
-          <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 p-4">
-            <div className="relative bg-white rounded-2xl w-full max-w-5xl h-[90vh] overflow-hidden shadow-2xl">
-
-              {/* Header */}
-              <div className="flex items-center justify-between px-4 py-3 border-b">
-                <h2 className="text-lg font-semibold text-gray-800">
-                  Company Certification
-                </h2>
-
-                <button
-                  onClick={() => setShowCertificate(false)}
-                  className="w-10 h-10 rounded-full hover:bg-gray-100 transition flex items-center justify-center"
-                >
-                  <i className="fas fa-times text-gray-600"></i>
-                </button>
-              </div>
-
-              {/* Desktop PDF Viewer */}
-              <iframe
-                src="/docs/Document.pdf"
-                className="hidden md:block w-full h-[calc(100%-60px)]"
-              />
-
-              {/* Mobile PDF View */}
-              <div className="flex md:hidden flex-col items-center justify-center h-[calc(100%-60px)] p-6 text-center">
-                <i className="fas fa-file-pdf text-6xl text-red-500 mb-4"></i>
-
-                <h3 className="text-xl font-bold text-gray-800 mb-2">
-                  Certification Document
-                </h3>
-
-                <p className="text-gray-600 mb-6">
-                  Tap below to open and view the PDF certificate.
-                </p>
-
-                <a
-                  href="/docs/Document.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="px-6 py-3 bg-orange-500 hover:bg-orange-600 text-white rounded-full font-semibold transition"
-                >
-                  Open PDF
-                </a>
-              </div>
-
-            </div>
-          </div>
-        )}
 
         <style jsx>{`
           @keyframes ping {
