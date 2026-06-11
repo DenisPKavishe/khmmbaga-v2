@@ -5,6 +5,7 @@ import Image from "next/image";
 
 export default function HardwareHero() {
   const [isVisible, setIsVisible] = useState(false);
+  const [imageHeight, setImageHeight] = useState(null);
   const [showCertificate, setShowCertificate] = useState(false);
 
   useEffect(() => {
@@ -47,7 +48,7 @@ export default function HardwareHero() {
         </div>
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 md:px-10 w-full z-10">
-          <div className="flex flex-col lg:flex-row gap-8 md:gap-12 lg:gap-16 items-center">
+          <div className="flex flex-col lg:flex-row gap-8 md:gap-12 lg:gap-16 items-start">
 
             {/* Left Content */}
             <div className="flex-1 space-y-5 md:space-y-6">
@@ -201,7 +202,7 @@ export default function HardwareHero() {
               </div>
             </div>
 
-            {/* Right Image */}
+            {/* Right Image - Now matches exact image height */}
             <div
               className={`flex-1 w-full transition-all duration-700 delay-300 ${
                 isVisible
@@ -211,40 +212,28 @@ export default function HardwareHero() {
             >
               <div className="relative w-full">
 
-                {/* Main Image */}
+                {/* Main Image - Auto height based on image */}
                 <div className="relative w-full rounded-2xl overflow-hidden shadow-2xl">
-
-                  <div className="relative w-full pt-[75%] sm:pt-[75%] md:pt-[90%] lg:pt-[100%]">
+                  {/* Remove fixed padding, use auto height */}
+                  <div className="relative w-full">
                     <Image
-                      src="/images/kb.jpeg"
+                      src="/images/hardwarePoster.png"
                       alt="Hardware tools and equipment"
-                      fill
-                      className="object-cover"
+                      width={800}
+                      height={900}
+                      className="w-full h-auto rounded-2xl"
                       priority
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      style={{ objectFit: 'contain' }}
                     />
                   </div>
 
                   {/* Gradient Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent pointer-events-none"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent pointer-events-none rounded-2xl"></div>
 
                   {/* Bottom Stats */}
                   <div className="absolute bottom-0 left-0 right-0 p-3 sm:p-4 md:p-6">
                     <div className="flex flex-row justify-between gap-2 sm:gap-3">
-
-                      <div className="flex-1 bg-black/70 backdrop-blur-md rounded-xl px-2 py-2 sm:px-3 sm:py-2.5 md:px-4 md:py-3">
-                        <p className="text-white text-xs sm:text-sm font-semibold text-center">
-                          <i className="fas fa-tools mr-1 sm:mr-2 text-xs sm:text-sm"></i>
-                          500+ Tools Available
-                        </p>
-                      </div>
-
-                      <div className="flex-1 bg-black/70 backdrop-blur-md rounded-xl px-2 py-2 sm:px-3 sm:py-2.5 md:px-4 md:py-3">
-                        <p className="text-white text-xs sm:text-sm font-semibold text-center">
-                          <i className="fas fa-truck mr-1 sm:mr-2 text-xs sm:text-sm"></i>
-                          Nationwide Delivery
-                        </p>
-                      </div>
 
                     </div>
                   </div>
@@ -255,7 +244,7 @@ export default function HardwareHero() {
                   <i className="fas fa-rocket text-xs sm:text-sm"></i>
 
                   <span className="font-bold text-[10px] sm:text-xs md:text-sm">
-                    Express Delivery
+                    +255 766 689 136
                   </span>
                 </div>
 
