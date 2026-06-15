@@ -129,24 +129,25 @@ export default function ContactMethods() {
         </div>
 
         <div className="mt-12 rounded-2xl overflow-hidden shadow-2xl map-container reveal-method transition-all duration-700" style={{ transitionDelay: '600ms' }}>
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d7925.601294028305!2d36.6563438!3d-3.398247!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x18365d3f2f2f2f2f%3A0x2f2f2f2f2f2f2f2f!2sMuriet%2C%20Arusha%2C%20Tanzania!5e0!3m2!1sen!2stz!4v1700000000000!5m2!1sen!2stz"
-          width="100%"
-          height="350"
-          style={{ border: 0 }}
-          allowFullScreen
-          loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
-          title="Muriet Arusha Tanzania Location Map"
-        ></iframe>
-        <div className="bg-white p-3 text-center border-t">
-          <p className="text-gray-700 text-sm">
-            <i className="fas fa-map-marker-alt text-orange-500 mr-2"></i>
-            Muriet Area, Arusha, Tanzania (Near Muriet Secondary School)
-          </p>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.7584228!2d36.6807678!3d-3.3868911!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x18371d00740b9965%3A0x9d356160d7210225!2sINTEL%20loti%20project!5e0!3m2!1sen!2stz!4v1700000000000!5m2!1sen!2stz"
+            width="100%"
+            height="350"
+            style={{ border: 0 }}
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            title="INTEL loti project - Arusha, Tanzania"
+          ></iframe>
+          <div className="bg-white p-3 text-center border-t">
+            <p className="text-gray-700 text-sm">
+              <i className="fas fa-map-marker-alt text-orange-500 mr-2"></i>
+              INTEL, Arusha, Tanzania (JM7M+65W)
+            </p>
+          </div>
         </div>
       </div>
-      </div>
+
 
       <style jsx>{`
         .contact-split-bg {
