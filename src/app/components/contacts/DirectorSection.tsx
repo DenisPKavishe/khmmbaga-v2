@@ -108,24 +108,27 @@ export default function DirectorSection() {
               </div>
             </div>
 
-            <div className="lg:w-1/2 w-full director-img-wrapper rounded-3xl shadow-2xl reveal-director transition-all duration-700 relative order-1 lg:order-2" style={{ transitionDelay: '100ms' }}>
-              <div className="relative w-full aspect-[4/3] md:aspect-[4/3] lg:aspect-auto lg:h-[500px]">
-                <Image
-                  src="/images/khalid.jpeg"
-                  alt="Khalid Ramadhan - CEO"
-                  fill
-                  className="object-cover object-top rounded-3xl"
-                  sizes="(max-width: 640px) 100vw, (max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  priority
-                  onError={(e) => {
-                    console.error('Image failed to load:', e);
-                    e.currentTarget.style.display = 'none';
-                  }}
-                />
-              </div>
-              <div className="absolute bottom-4 left-4 md:bottom-6 md:left-6 bg-white/95 backdrop-blur-md rounded-xl px-3 py-1 md:px-4 md:py-2 shadow-lg">
-                <i className="fas fa-quote-left text-orange-500 text-base md:text-xl"></i>
-                <p className="text-gray-800 font-semibold text-xs md:text-sm">"Excellence in every detail"</p>
+            {/* Fixed Card with exact dimensions */}
+            <div className="lg:w-1/2 w-full reveal-director transition-all duration-700 order-1 lg:order-2" style={{ transitionDelay: '100ms' }}>
+              <div className="director-card" style={{ width: '100%', maxWidth: '500px', margin: '0 auto' }}>
+                <div className="director-img-wrapper" style={{ width: '100%', height: '700px', position: 'relative' }}>
+                  <Image
+                    src="/images/new.jpeg"
+                    alt="Khalid Ramadhan - CEO"
+                    fill
+                    className="object-cover rounded-3xl"
+                    sizes="(max-width: 640px) 100vw, (max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    priority
+                    onError={(e) => {
+                      console.error('Image failed to load:', e);
+                      e.currentTarget.style.display = 'none';
+                    }}
+                  />
+                  <div className="absolute bottom-4 left-4 md:bottom-6 md:left-6 bg-white/95 backdrop-blur-md rounded-xl px-3 py-1 md:px-4 md:py-2 shadow-lg">
+                    <i className="fas fa-quote-left text-orange-500 text-base md:text-xl"></i>
+                    <p className="text-gray-800 font-semibold text-xs md:text-sm">"Excellence in every detail"</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -135,24 +138,26 @@ export default function DirectorSection() {
 
           {/* Second CEO - Kaniki Athumani */}
           <div className="flex flex-col lg:flex-row gap-8 md:gap-12 items-center">
-            <div className="lg:w-1/2 w-full director-img-wrapper rounded-3xl shadow-2xl reveal-director transition-all duration-700 relative" style={{ transitionDelay: '100ms' }}>
-              <div className="relative w-full aspect-[4/3] md:aspect-[4/3] lg:aspect-auto lg:h-[500px]">
-                <Image
-                  src="/images/khan.jpeg"
-                  alt="Kaniki Athumani - Managing Director"
-                  fill
-                  className="object-cover object-top rounded-3xl"
-                  sizes="(max-width: 640px) 100vw, (max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  priority
-                  onError={(e) => {
-                    console.error('Image failed to load:', e);
-                    e.currentTarget.style.display = 'none';
-                  }}
-                />
-              </div>
-              <div className="absolute bottom-4 left-4 md:bottom-6 md:left-6 bg-white/95 backdrop-blur-md rounded-xl px-3 py-1 md:px-4 md:py-2 shadow-lg">
-                <i className="fas fa-quote-left text-orange-500 text-base md:text-xl"></i>
-                <p className="text-gray-800 font-semibold text-xs md:text-sm">"Building Tanzania's future"</p>
+            {/* Fixed Card with exact dimensions */}
+            <div className="lg:w-1/2 w-full reveal-director transition-all duration-700" style={{ transitionDelay: '100ms' }}>
+              <div className="director-card" style={{ width: '100%', maxWidth: '500px', margin: '0 auto' }}>
+                <div className="director-img-wrapper" style={{ width: '100%', height: '700px', position: 'relative' }}>
+                  <Image
+                    src="/images/kb2.jpeg"
+                    alt="Kaniki Athumani - Managing Director"
+                    fill
+                    className="object-cover rounded-3xl"
+                    sizes="(max-width: 640px) 100vw, (max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    onError={(e) => {
+                      console.error('Image failed to load:', e);
+                      e.currentTarget.style.display = 'none';
+                    }}
+                  />
+                  <div className="absolute bottom-4 left-4 md:bottom-6 md:left-6 bg-white/95 backdrop-blur-md rounded-xl px-3 py-1 md:px-4 md:py-2 shadow-lg">
+                    <i className="fas fa-quote-left text-orange-500 text-base md:text-xl"></i>
+                    <p className="text-gray-800 font-semibold text-xs md:text-sm">"Building Tanzania's future"</p>
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -170,7 +175,7 @@ export default function DirectorSection() {
                     <i className="fas fa-check-circle"></i> 10+ Projects
                   </span>
                   <span className="bg-blue-100 text-blue-600 text-xs px-3 py-1 rounded-full">
-                    <i className="fas fa-building"></i> Nationwide
+                    <i className="fas fa-building"></i> Arusha & Moshi
                   </span>
                 </div>
               </div>
@@ -236,14 +241,41 @@ export default function DirectorSection() {
           z-index: 2;
         }
         
+        .director-card {
+          width: 100%;
+          max-width: 500px;
+          margin: 0 auto;
+        }
+        
         .director-img-wrapper {
           position: relative;
+          width: 100%;
+          height: 530px;
           overflow: hidden;
           border-radius: 1.5rem;
         }
+        
         @media (min-width: 768px) {
           .director-img-wrapper {
             border-radius: 2rem;
+          }
+        }
+        
+        @media (max-width: 1024px) {
+          .director-img-wrapper {
+            height: 480px;
+          }
+        }
+        
+        @media (max-width: 768px) {
+          .director-img-wrapper {
+            height: 430px;
+          }
+        }
+        
+        @media (max-width: 640px) {
+          .director-img-wrapper {
+            height: 380px;
           }
         }
         

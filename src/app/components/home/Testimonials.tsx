@@ -98,7 +98,7 @@ export default function Testimonials() {
               <p className="text-gray-500 italic text-sm leading-relaxed mb-6">
                 "{testimonial.text}"
               </p>
-              <div className="flex items-center gap-3">
+              {/* <div className="flex items-center gap-3">
                 <div className="relative w-12 h-12 rounded-full overflow-hidden">
                   <Image
                     src={testimonial.image}
@@ -109,9 +109,9 @@ export default function Testimonials() {
                 </div>
                 <div>
                   <div className="font-bold text-dark text-sm">{testimonial.name}</div>
-                  {/* <div className="text-primary text-xs font-medium">{testimonial.title}</div> */}
+                  <div className="text-primary text-xs font-medium">{testimonial.title}</div>
                 </div>
-              </div>
+              </div> */}
             </div>
           ))}
         </div>

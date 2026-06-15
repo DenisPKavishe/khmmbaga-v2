@@ -7,7 +7,7 @@ import Image from 'next/image';
 const slides = [
   {
     id: 0,
-    image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1600&q=80',
+    image: 'https://images.unsplash.com/photo-1768926968986-a88590ce5025?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     tagline: 'Construction and Supplier',
     title: 'Quality\nConstruction.',
     description: 'Decades of craftsmanship, innovation, and trust transforming bold visions into enduring structures that stand the test of time.',
@@ -16,7 +16,7 @@ const slides = [
   },
   {
     id: 1,
-    image: 'https://images.unsplash.com/photo-1590650153855-d9e808231d41?w=1600&q=80',
+    image: '/images/khb2.jpeg',
     tagline: 'Industrial Excellence',
     title: 'Built to\nLast.',
     description: 'From foundation to finish, our industrial division delivers precision engineering and quality materials on every project we undertake.',
@@ -25,7 +25,7 @@ const slides = [
   },
   {
     id: 2,
-    image: 'https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1600&q=80',
+    image: 'https://images.unsplash.com/photo-1694521787673-28cbd8830ea5?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     tagline: 'Since 2026',
     title: 'Trusted\nPartners.',
     description: 'Building relationships as strong as our structures your vision is safe in the hands of KH MMBAGA\'s expert team.',
