@@ -74,7 +74,7 @@ export default function DirectorSection() {
               </div>
 
               <p className="text-gray-600 leading-relaxed text-sm md:text-base">
-                Khalid Ramadhan serves as our Director, bringing over 10 years of specialized experience in industrial construction and project management. He oversees daily operations, ensuring that every project runs smoothly from inception to completion. Khalid's expertise in resource optimization and team coordination has been instrumental in delivering complex projects on time and within budget. His commitment to safety standards and quality control has earned KH MMBAGA a reputation for reliability and excellence across the Kilimanjaro region.
+                Khalid Ramadhan serves as Chief Executive Officer(CEO) of the company, bringing over 10 years of specialized experience in industrial construction and project management. He oversees daily operations, ensuring that every project runs smoothly from inception to completion. Khalid's expertise in resource optimization and team coordination has been instrumental in delivering complex projects on time and within budget. His commitment to safety standards and quality control has earned KH MMBAGA a reputation for reliability and excellence across Tanzania.
               </p>
 
               <div className="border-t border-gray-200 pt-6 mt-4">

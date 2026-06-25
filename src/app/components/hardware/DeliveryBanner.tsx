@@ -36,7 +36,7 @@ export default function DeliveryBanner() {
         <div className="reveal-banner transition-all duration-700" style={{ transitionDelay: '200ms' }}>
           <div className="flex items-center gap-3">
             <i className="fas fa-headset text-2xl"></i>
-            <span className="font-semibold">24/7 WhatsApp Support: +255 784 567 890</span>
+            <span className="font-semibold">24/7 WhatsApp Support: +255 766 689 136</span>
           </div>
         </div>
       </div>
